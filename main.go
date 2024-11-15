@@ -1,13 +1,11 @@
 package main
 
-import (
-	"test/fch1"
-)
+import "test/args"
 
 func main() {
-	runFch1()
+	runArgsEcho()
 }
 
-func runFch1() {
-	fch1.Echo()
+func runArgsEcho() {
+	args.Echo()
 }

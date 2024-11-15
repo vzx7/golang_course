@@ -1,4 +1,4 @@
-package fch1
+package args
 
 import (
 	"fmt"
