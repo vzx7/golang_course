@@ -50,7 +50,11 @@ func SearchV2() {
 }
 
 func SearchV3() {
-	counts := make(map[string]int)
+	type str struct {
+		fName string
+		value string
+	}
+	counts := make(map[str]int)
 	for _, filename := range os.Args[1:] {
 		//https://stackoverflow.com/questions/75206234/for-go-ioutil-readall-ioutil-readfile-ioutil-readdir-deprecated
 		data, err := os.ReadFile(filename)
@@ -59,13 +63,15 @@ func SearchV3() {
 			continue
 		}
 		for _, line := range strings.Split(string(data), "\n") {
-			counts[line]++
+			counts[str{
+				fName: filename,
+				value: line,
+			}]++
 		}
-
 	}
 	for line, n := range counts {
 		if n > 1 {
-			fmt.Printf("%d\t%s\n", n, line)
+			fmt.Printf("count: %d,\t fileName: %s,\t value: %s\n", n, line.fName, line.value)
 		}
 	}
 }
