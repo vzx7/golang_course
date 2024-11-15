@@ -2,20 +2,18 @@ package main
 
 import (
 	"test/animation"
-	"test/args"
-	"test/repeat"
 )
 
 func main() {
-	runArgsEcho()
+	//runArgsEcho()
 	//repeatSearch()
 	animation.Gen()
 }
 
 func runArgsEcho() {
-	args.Echo()
+	//args.Echo()
 }
 
 func repeatSearch() {
-	repeat.SearchV3()
+	//repeat.SearchV3()
 }
