@@ -1,12 +1,13 @@
 package main
 
 import (
-	"fmt"
-	"test/mathfunc"
+	"test/fch1"
 )
 
 func main() {
-	name := "Hello World!"
-	fmt.Printf("%s\n", name)
-	mathfunc.CreateMatrix(10, 5)
+	runFch1()
+}
+
+func runFch1() {
+	fch1.Echo()
 }
