@@ -1,19 +1,12 @@
 package main
 
 import (
-	"test/animation"
+	"test/fetch"
 )
 
 func main() {
-	//runArgsEcho()
-	//repeatSearch()
-	animation.Gen()
-}
-
-func runArgsEcho() {
 	//args.Echo()
-}
-
-func repeatSearch() {
 	//repeat.SearchV3()
+	//animation.Gen()
+	fetch.Get()
 }
